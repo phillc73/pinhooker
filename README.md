@@ -3,9 +3,9 @@ pinhooker
 
 `pinhooker` is an R package with two main aspects. The first is a pre-compiled CSV file comprising historic thoroughbred bloodstock sales data. The second aspect is a set of functions to compile bespoke thoroughbred sale results datasets and extend the included CSV file.
 
-The `bloodstockSalesData.csv` file is found in the [inst/extdata](https://github.com/phillc73/pinhooker/inst/extdata) directory, but will move up to the root directory when the package is installed. If only the data is required, and not the whole R package, simply download the CSV directly from this location.
+The `bloodstockSalesData.csv` file is found in the [inst/extdata](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) directory, but will move up to the root directory when the package is installed. If only the data is required, and not the whole R package, simply download the CSV directly from this location.
 
-A collection of scripts located in the [recipes](https://github.com/phillc73/pinhooker/recipes) folder support creating bespoke datasets from a wide range of sale auctioneers.
+A collection of scripts located in the [recipes](https://github.com/phillc73/pinhooker/tree/master/recipes) folder support creating bespoke datasets from a wide range of sale auctioneers.
 
 ## Quick start
 
@@ -47,7 +47,7 @@ The following thoroughbred bloodstock sale companies are currently included:
 * [Tattersalls](http://www.tattersalls.com)
 * [Tattersalls Ireland](http://www.tattersalls.ie)
 
-Data between 2009 and 2015 is included in the `bloodstockSalesData.csv` file and relevant scripts covering the same time period are found in the  [recipes](https://github.com/phillc73/pinhooker/recipes) folder.
+Data between 2009 and 2015 is included in the `bloodstockSalesData.csv` file and relevant scripts covering the same time period are found in the  [recipes](https://github.com/phillc73/pinhooker/tree/master/recipes) folder.
 
 Unfortunately, Tattersalls Ireland Ascot and Cheltenham sale results are not yet included. Only a very limited number of sale results appear to be available for 2014 and 2015. The data which is available will be included as a priority in future releases.
 
@@ -93,7 +93,7 @@ There are some known data issues in the included `bloodstockSalesData.csv` file.
 * Provide examples of data use
 * Create a proper vignette
 * Add data from more bloodstock sale companies
-* Continually update default data set and [recipes](https://github.com/phillc73/pinhooker/recipes) with new sale results from existing companies.
+* Continually update default data set and [recipes](https://github.com/phillc73/pinhooker/tree/master/recipes) with new sale results from existing companies.
 
 ## Links
 
