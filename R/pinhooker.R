@@ -2,7 +2,7 @@
 #'
 #' The pinhooker package provides a ready to use data set, in the form of a CSV file, for a global collection of thoroughbred bloodstock sales since 2009. Also included are functions and scripts in order to collate custom data sets, for example from a specific vendor, year or sale. Data has been normalised across vendors in order to generate consistent data sets.
 #'
-#' @section pinhooker functions
+#' @section pinhooker functions:
 #' The pinhooker functions are as follows, and generally correspond directly with a specific bloodstock sale company:
 #'
 #' \code{getGoffs}: download historic sales data for Goffs \url{http://goffs.com} and Goffs DBS \url{http://goffsdbs.com}.

@@ -1,0 +1,7 @@
+dlArqana.R          Download Arqana sales results data. Used to create default bloodstockSalesData.Rds file.
+dlBBAG.R            Download BBAG sales results data. Used to create default bloodstockSalesData.Rds file.
+dlDBS.R             Download Goffs DBS sales results data. Used to create default bloodstockSalesData.Rds file.
+dlGoffs.R           Download Goffs sales results data. Used to create default bloodstockSalesData.Rds file.
+dlTatts.R           Download Tattersalls sales results data. Used to create default bloodstockSalesData.Rds file.
+dlTattsIreland.R    Download Tattersalls Ireland sales results data. Used to create default bloodstockSalesData.Rds file.
+tests.R             Simple script to load generated files and delete records if required.
