@@ -76,7 +76,8 @@ By default, each function outputs an Rds file. However, creation of an CSV file 
 Once the package is installed, if you just wish to use the default `bloodstockSalesData.Rds` located in the [inst/extdata](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) directory, use the following command to load it and assign to a variable:
 
 ```r
-bloodstockSalesData <- system.file("extdata", "bloodstockSalesData.Rds", package = "pinhooker")
+pinhookerData <- system.file("extdata", "bloodstockSalesData.Rds", package = "pinhooker")
+bloodstockSalesData <- readRDS(pinhookerData)
 ```
 ## Status
 
