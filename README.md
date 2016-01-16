@@ -7,7 +7,7 @@ The `bloodstockSalesData.Rds` file is found in the [inst/extdata](https://github
 
 A collection of scripts located in the [demo](https://github.com/phillc73/pinhooker/tree/master/demo) folder support creating bespoke datasets from a wide range of sale auctioneers.
 
-The package and included [demo](https://github.com/phillc73/pinhooker/tree/master/demo) support creation of a CSV and SQLite database, in addition to the default Rds file.
+The package and included [demo](https://github.com/phillc73/pinhooker/tree/master/demo) scripts support creation of a CSV file and SQLite database, in addition to the default Rds file.
 
 ## Quick start
 
@@ -49,7 +49,7 @@ The following thoroughbred bloodstock sale companies are currently included:
 * [Tattersalls](http://www.tattersalls.com)
 * [Tattersalls Ireland](http://www.tattersalls.ie)
 
-Sales results between 2009 and 2015 are included in the `bloodstockSalesData.Rds` file and relevant scripts covering the same time period are found in the [demo](https://github.com/phillc73/pinhooker/tree/master/demo) folder.
+Sales results between 2009 and 2015 are included in the [bloodstockSalesData.Rds](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) file and relevant scripts covering the same time period are found in the [demo](https://github.com/phillc73/pinhooker/tree/master/demo) folder.
 
 Unfortunately, Tattersalls Ireland Ascot and Cheltenham sale results are not yet included. Only a very limited number of sale results appear to be available for 2014 and 2015. The data which is available will be included as a priority in future releases.
 
@@ -92,7 +92,7 @@ Problems? Something just doesn't work?
 
 [Submit issues here](https://github.com/phillc73/pinhooker/issues).
 
-There are some known data issues in the included `bloodstockSalesData.Rds` file. Many of these issues are found in the originating data files as supplied by the sale companies. However, there are some errors with older Tattersalls Ireland data which needs to be addressed. Please see relevant [issue](https://github.com/phillc73/pinhooker/issues) for details.
+There are some known data issues in the included [bloodstockSalesData.Rds](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) file. Many of these issues are found in the originating data files as supplied by the sale companies. However, there are some errors with older Tattersalls Ireland data which needs to be addressed. Please see relevant [issue](https://github.com/phillc73/pinhooker/issues/1) for details.
 
 ### To Do
 
