@@ -73,12 +73,23 @@ Each function contains documented descriptions for their use and all supported a
 
 By default, each function outputs an Rds file. However, creation of an CSV file and SQLite database is also supported.
 
+### Using the Default Rds File
+
 Once the package is installed, if you just wish to use the default `bloodstockSalesData.Rds` located in the [inst/extdata](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) directory, use the following command to load it and assign to a variable:
 
 ```r
 pinhookerData <- system.file("extdata", "bloodstockSalesData.Rds", package = "pinhooker")
 bloodstockSalesData <- readRDS(pinhookerData)
 ```
+
+If you don't wish to install the entire package, and just wish to use the Rds file, download it directly from the [inst/extdata](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) directory and load it into your R environment using just the `readRDS()` command.
+
+Python users can import Rds files using [ttr.rdsutils](https://pypi.python.org/pypi/ttr.rdsutils/0.1.0).
+
+### Why an Rds file?
+
+The short answer is file size. The relevant CVS and SQLite files for the entire current data set are approximately 35MB large. The equivalent Rds is file is just 4MB. The smaller file size aids in package distribution and speed of installation.
+
 ## Status
 
 This package is under active development.
