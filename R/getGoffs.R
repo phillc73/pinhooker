@@ -55,6 +55,7 @@
 #'   rds = TRUE, sqlite = FALSE, auctioneer = "Goffs", country = "IRE", currency
 #'   = "EUR", date = "2015-02-11", filename = "goffsSaleData")
 #'
+#' @export
 
 getGoffs <-
   function(url, catalogue = "", auctioneer, country, currency, date, csv = FALSE, rds = TRUE, sqlite = FALSE, filename = "bloodstockSalesData") {

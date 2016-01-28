@@ -56,6 +56,7 @@
 #'   currency = "EUR", date = "2015-12-05", sale = "Breeding Stock Sale",
 #'   filename = "arqanaSaleData")
 #'
+#' @export
 
 getArqana <-
   function(url, catalogue = "", auctioneer, country, currency, date, csv = FALSE, rds = TRUE, sqlite = FALSE, sale = "", filename = "bloodstockSalesData") {

@@ -59,19 +59,20 @@
 #'   country = "UK", currency = "GNS", date = "2015-11-30", sale = "December
 #'   Mares Sale", filename = "tattsSaleData")
 #'
+#' @export
 
 getTatts <-
   function(url, catalogue = "", auctioneer, country, currency, date, csv = FALSE, rds = TRUE, sqlite = FALSE, sale = "", filename = "bloodstockSalesData") {
     # Scrape URL
-    tattsData <- read_html(url)
+    tattsData <- rvest::read_html(url)
 
     # Extract horse name, sire and dam data
     nameSexSireDam <-
       as.list(
-        tattsData %>% html_nodes(
+        tattsData %>% rvest::html_nodes(
           ".row2+ .odd .lhs+ td , .row2+ .even .lhs+ td , .odd:nth-child(3) .lhs+ td"
         ) %>%
-          html_text()
+          rvest::html_text()
       )
     nameSexSireDam <- unlist(nameSexSireDam)
     nameSexSireDam <-
@@ -79,8 +80,8 @@ getTatts <-
 
     # Extract Consignor and Purchaser data
     consignorPurchaser <-
-      as.list(tattsData %>% html_nodes(".row2 .lhs+ td") %>%
-                html_text())
+      as.list(tattsData %>% rvest::html_nodes(".row2 .lhs+ td") %>%
+                rvest::html_text())
     consignorPurchaser <- unlist(consignorPurchaser)
     consignorPurchaser <-
       as.data.frame(consignorPurchaser, stringsAsFactors = FALSE)
@@ -88,8 +89,8 @@ getTatts <-
     # Extract Lot numbers
     lot <-
       as.list(
-        tattsData %>% html_nodes(".row2+ .odd .lhs , .row2+ .even .lhs , .odd:nth-child(3) .lhs") %>%
-          html_text()
+        tattsData %>% rvest::html_nodes(".row2+ .odd .lhs , .row2+ .even .lhs , .odd:nth-child(3) .lhs") %>%
+          rvest::html_text()
       )
 
     lot <- unlist(lot)
@@ -106,10 +107,10 @@ getTatts <-
     # Extract prices, remove commas, set NA to zero, set class to integer
     price <-
       as.list(
-        tattsData %>% html_nodes(
+        tattsData %>% rvest::html_nodes(
           ".row2+ .odd .rhsr , .row2+ .even .rhsr , .odd:nth-child(3) .rhsr"
         ) %>%
-          html_text()
+          rvest::html_text()
       )
 
     price <- unlist(price)

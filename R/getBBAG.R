@@ -56,6 +56,7 @@
 #'   "DE", currency = "EUR", date = "2015-10-16", sale = "October Mixed Sales",
 #'   filename = "bbagSaleData")
 #'
+#' @export
 
 getBBAG <-
   function(url, catalogue = "", auctioneer, country, currency, date, csv = FALSE, rds = TRUE, sqlite = FALSE, sale = "", filename = "bloodstockSalesData") {
