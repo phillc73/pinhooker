@@ -9,6 +9,10 @@ A collection of scripts located in the [demo](https://github.com/phillc73/pinhoo
 
 The package and included [demo](https://github.com/phillc73/pinhooker/tree/master/demo) scripts support creation of a CSV file and SQLite database, in addition to the default Rds file.
 
+## Latest Update
+
+* Goffs DBS January 2016 sale results
+
 ## Quick start
 
 ### Install
