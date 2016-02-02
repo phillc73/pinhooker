@@ -3,7 +3,7 @@ pinhooker
 
 `pinhooker` is an R package with two main aspects. The first is a pre-compiled Rds file comprising historic thoroughbred bloodstock sales data. The second aspect is a set of functions to compile bespoke thoroughbred sale results datasets and extend the included Rds file.
 
-The `bloodstockSalesData.Rds` file is found in the [inst/extdata](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) directory, but will move up to the root directory when the package is installed. If only the data is required, and not the whole R package, simply download the Rds directly from this location. This data set exceeds 150,000 individual bloodstock sale records.
+The `bloodstockSalesData.rds` file is found in the [inst/extdata](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) directory, but will move up to the root directory when the package is installed. If only the data is required, and not the whole R package, simply download the Rds directly from this location. This data set exceeds 152,000 individual bloodstock sale records.
 
 A collection of scripts located in the [demo](https://github.com/phillc73/pinhooker/tree/master/demo) folder support creating bespoke datasets from a wide range of sale auctioneers.
 
@@ -12,6 +12,16 @@ The package and included [demo](https://github.com/phillc73/pinhooker/tree/maste
 ## Quick start
 
 ### Install
+
+Install from GitLab
+
+```r
+# install.packages("devtools")
+devtools::install_git("https://gitlab.com/phillc73/pinhooker.git")
+library("pinhooker")
+```
+
+Or install from GitHub if you prefer (identical mirror of GitLab)
 
 ```r
 # install.packages("devtools")
@@ -49,7 +59,7 @@ The following thoroughbred bloodstock sale companies are currently included:
 * [Tattersalls](http://www.tattersalls.com)
 * [Tattersalls Ireland](http://www.tattersalls.ie)
 
-Sales results between 2009 and 2015 are included in the [bloodstockSalesData.Rds](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) file and relevant scripts covering the same time period are found in the [demo](https://github.com/phillc73/pinhooker/tree/master/demo) folder.
+Sales results between 2009 and 2015 are included in the [bloodstockSalesData.rds](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) file and relevant scripts covering the same time period are found in the [demo](https://github.com/phillc73/pinhooker/tree/master/demo) folder.
 
 Unfortunately, Tattersalls Ireland Ascot and Cheltenham sale results are not yet included. Only a very limited number of sale results appear to be available for 2014 and 2015. The data which is available will be included as a priority in future releases.
 
@@ -75,10 +85,10 @@ By default, each function outputs an Rds file. However, creation of an CSV file 
 
 ### Using the Default Rds File
 
-Once the package is installed, if you just wish to use the default `bloodstockSalesData.Rds` located in the [inst/extdata](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) directory, use the following command to load it and assign to a variable:
+Once the package is installed, if you just wish to use the default `bloodstockSalesData.rds` located in the [inst/extdata](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) directory, use the following command to load it and assign to a variable:
 
 ```r
-pinhookerData <- system.file("extdata", "bloodstockSalesData.Rds", package = "pinhooker")
+pinhookerData <- system.file("extdata", "bloodstockSalesData.rds", package = "pinhooker")
 bloodstockSalesData <- readRDS(pinhookerData)
 ```
 

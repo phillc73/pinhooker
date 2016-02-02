@@ -2,7 +2,11 @@
 # Set function values if changes required from defaults, e.g. rds = TRUE (default generated file is csv)
 # getGoffs(url = "http://goffsdbs.com/sales-results/sales/january-sales-2015/excel/", catalogue = "http://goffsdbs.com/files/8714/2115/9145/January2015PDF.pdf", auctioneer = "GoffsDBS", country = "UK", currency = "GBP", date = "2015-01-27", rds = TRUE, csv = FALSE, filename = "dbsSaleData")
 
-library(pinhooker)
+library("pinhooker")
+
+# 2016
+
+getGoffs(url = "http://goffsdbs.com/sales-results/sales/january-sales-2016/excel/", catalogue = "http://goffsdbs.com/files/1614/5261/2542/January_Sales_PDF.pdf", auctioneer = "GoffsDBS", country = "UK", currency = "GBP", date = "2016-01-27")
 
 # 2015
 
