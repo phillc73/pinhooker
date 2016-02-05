@@ -64,7 +64,7 @@
 getTatts <-
   function(url, catalogue = "", auctioneer, country, currency, date, csv = FALSE, rds = TRUE, sqlite = FALSE, sale = "", filename = "bloodstockSalesData") {
     # Scrape URL
-    tattsData <- rvest::read_html(url)
+    tattsData <- xml2::read_html(url)
 
     # Extract horse name, sire and dam data
     nameSexSireDam <-

@@ -4,6 +4,11 @@
 
 library(pinhooker)
 
+# 2016
+
+getTatts(url = "http://db.tattersalls.com/4DCGI/Sale/FEB%2016", catalogue = "http://docs.tattersalls.com/cat/february/feb2016.pdf", auctioneer = "Tattersalls", country = "UK", currency = "GNS", date = "2016-02-04", sale = "February Sale")
+
+
 # 2015
 
 getTatts(url = "http://db.tattersalls.com/4DCGI/Entry/List?30%096%09=%20DEM%2015%09by8", catalogue = "http://docs.tattersalls.com/cat/december/2015decmares.pdf", auctioneer = "Tattersalls", country = "UK", currency = "GNS", date = "2015-11-30", sale = "December Mares Sale")

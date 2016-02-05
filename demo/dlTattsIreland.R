@@ -4,6 +4,11 @@
 
 library(pinhooker)
 
+# 2016
+
+getTatts(url = "http://db.tattersalls.ie/4DCGI/Sale/FNH%2016", catalogue = "http://tattersalls.ie/images/Documents/full%20catalogue%20-%20feb%20nh%20sale%202016.pdf", auctioneer = "Tattersalls Ireland", country = "IRE", currency = "EUR", date = "2016-02-02", sale = "February National Hunt Sale")
+
+
 # 2015
 
 getTatts(url = "http://db.tattersalls.ie/4DCGI/Entry/List?30%096%09=%20NNH%2015%09by8", catalogue = "http://www.tattersalls.ie/images/Documents/Full_Catalogue.pdf", auctioneer = "Tattersalls Ireland", country = "IRE", currency = "EUR", date = "2015-11-09", sale = "November National Hunt Sale")

@@ -3,7 +3,7 @@ Type: Package
 Title: Global Thoroughbred Bloodstock Sales Data
 Version: 0.1
 Date: 2016-01-16
-Author: Authors@R: person("Phill", "Clarke", email = "phill@starkingdom.co.uk",
+Authors@R: person("Phill", "Clarke", email = "phill@starkingdom.co.uk",
     role = c("aut", "cre"))
 Maintainer: Phill Clarke <phill@starkingdom.co.uk>
 Description: The pinhooker package provides a ready to use data set, in the
@@ -21,7 +21,9 @@ LazyData: TRUE
 Imports:
     gdata (>= 2.17.0),
     plyr (>= 1.8.3),
-    rvest (>= 0.3.1)
+    rvest (>= 0.3.1),
+    magrittr (>= 1.5),
+    xml2 (>= 0.1.2)
 Suggests:
     RSQLite (>= 1.0.0),
     knitr (>= 1.12)
