@@ -57,76 +57,74 @@
 #'   filename = "arqanaSaleData")
 #'
 #' @export
-
-getArqana <-
-  function(url, catalogue = "", auctioneer, country, currency, date, csv = FALSE, rds = TRUE, sqlite = FALSE, sale = "", filename = "bloodstockSalesData") {
+getArqana <- function(url, catalogue = "", auctioneer, country, currency, date,
+                      csv = FALSE, rds = TRUE, sqlite = FALSE, sale = "",
+                      filename = "bloodstockSalesData") {
     # Read in XLS file and remove any additional columns
     saleData <-
       gdata::read.xls(
         url, sheet = 1, method = "csv", colClasses = "character", skip = 1, blank.lines.skip = TRUE, encoding = "latin1"
       )
 
+    # Rename columns to English
+    names(saleData) <- c("Lot", "Sex", "Foaled", "Type", "Name", "Sire", "Dam", "Consignor", "Stabling", "coveringSire", "Issue", "Purchaser", "Price")
+
     # Translate French to English
-    saleData$Sexe[saleData$Sexe == "F." &
-                    saleData$Produit == "Foal"] <- "Filly"
-    saleData$Sexe[saleData$Sexe == "M." &
-                    saleData$Produit == "Foal"] <- "Colt"
-    saleData$Sexe[saleData$Sexe == "F." &
-                    saleData$Produit == "Jument"] <- "Mare"
-    saleData$Sexe[saleData$Sexe == "M." &
-                    saleData$Produit == "Etalon"] <- "Stallion"
-    saleData$Sexe[saleData$Sexe == "M." &
-                    saleData$Produit == "Parts d'étalon"] <- "Stallion Shares"
+    saleData$Sex[saleData$Sex == "F." &
+                   saleData$Type == "Foal"] <- "Filly"
+    saleData$Sex[saleData$Sex == "M." &
+                   saleData$Type == "Foal"] <- "Colt"
+    saleData$Sex[saleData$Sex == "F." &
+                   saleData$Type == "Jument"] <- "Mare"
+    saleData$Sex[saleData$Sex == "M." &
+                   saleData$Type == "Etalon"] <- "Stallion"
+    saleData$Sex[saleData$Sex == "M." &
+                   saleData$Type == "Parts d'étalon"] <- "Stallion Shares"
 
-    saleData$Sexe[saleData$Sexe == "F."] <- "Filly"
-    saleData$Sexe[saleData$Sexe == "M."] <- "Colt"
-    saleData$Sexe[saleData$Sexe == "H."] <- "Gelding"
+    saleData$Sex[saleData$Sex == "F."] <- "Filly"
+    saleData$Sex[saleData$Sex == "M."] <- "Colt"
+    saleData$Sex[saleData$Sex == "H."] <- "Gelding"
 
-    saleData$Produit[saleData$Produit == "Jument"] <- "Mare"
-    saleData$Produit[saleData$Produit == "Pouliche"] <- "Filly"
-    saleData$Produit[saleData$Produit == "Etalon"] <- "Stallion"
-    saleData$Produit[saleData$Produit == "Parts d'étalon"] <- "Stallion Shares"
-    saleData$Produit[saleData$Produit == "Cheval à l'entrainement"] <-
+    saleData$Type[saleData$Type == "Jument"] <- "Mare"
+    saleData$Type[saleData$Type == "Pouliche"] <- "Filly"
+    saleData$Type[saleData$Type == "Etalon"] <- "Stallion"
+    saleData$Type[saleData$Type == "Parts d'étalon"] <- "Stallion Shares"
+    saleData$Type[saleData$Type == "Cheval à l'entrainement"] <-
       "Horse in Training"
-    saleData$Produit[saleData$Produit == "2 ans"] <- "2 years"
-    saleData$Produit[saleData$Produit == "3 ans"] <- "3 years"
-    saleData$Produit[saleData$Produit == "Store 2 ans"] <- "Store 2"
-    saleData$Produit[saleData$Produit == "Store 3 ans"] <- "Store 3"
+    saleData$Type[saleData$Type == "2 ans"] <- "2 years"
+    saleData$Type[saleData$Type == "3 ans"] <- "3 years"
+    saleData$Type[saleData$Type == "Store 2 ans"] <- "Store 2"
+    saleData$Type[saleData$Type == "Store 3 ans"] <- "Store 3"
 
     saleData$Issue[saleData$Issue == "Absent"] <- "Withdrawn"
     saleData$Issue[saleData$Issue == "Racheté"] <- "Not Sold"
     saleData$Issue[saleData$Issue == "Vendu"] <- "Sold"
 
-    saleData$Vendeur[saleData$Vendeur == "Inconnu"] <- "Unknown"
-    saleData$Nom[saleData$Nom == "INCONNU"] <- "UNKNOWN"
-    saleData$Père[saleData$Père == "INCONNU"] <- "UNKNOWN"
+    saleData$Consignor[saleData$Consignor == "Inconnu"] <- "Unknown"
+    saleData$Name[saleData$Name == "INCONNU"] <- "UNKNOWN"
+    saleData$Sire[saleData$Sire == "INCONNU"] <- "UNKNOWN"
 
-    saleData$Vendeur[grepl("Page Blanche", saleData$Vendeur) == TRUE] <- "Blank Page"
-    saleData$Nom[grepl("PAGE BLANCHE", saleData$Nom) == TRUE] <- "BLANK PAGE"
+    saleData$Consignor[grepl("Page Blanche", saleData$Consignor) == TRUE] <- "Blank Page"
+    saleData$Name[grepl("PAGE BLANCHE", saleData$Name) == TRUE] <- "BLANK PAGE"
 
     # Normalise Not Sold lots to match Goffs
-    saleData$Acheteur[saleData$Issue == "Withdrawn"] <- "Withdrawn"
-    saleData$Acheteur[saleData$Issue == "Not Sold"] <-
-      paste("Not Sold (",saleData$Enchères[saleData$Issue == "Not Sold"],")", sep = "")
-    saleData$Enchères[saleData$Issue == "Not Sold"] <- "0"
-    saleData$Acheteur[saleData$Issue == "Amiable"] <-
-      paste(saleData$Acheteur[saleData$Issue == "Amiable"],"(PS)", sep = " ")
+    saleData$Purchaser[saleData$Issue == "Withdrawn"] <- "Withdrawn"
+    saleData$Purchaser[saleData$Issue == "Not Sold"] <-
+      paste("Not Sold (",saleData$Price[saleData$Issue == "Not Sold"],")", sep = "")
+    saleData$Price[saleData$Issue == "Not Sold"] <- "0"
+    saleData$Purchaser[saleData$Issue == "Amiable"] <-
+      paste(saleData$Purchaser[saleData$Issue == "Amiable"],"(PS)", sep = " ")
 
     saleData$Issue <- NULL
-
-    # Rename columns to English
-    saleData <-
-      plyr::rename(
-        saleData,c(
-          "Nom" = "Name", "Date.de.naissance" = "Foaled", "Sexe" = "Sex", "Produit" = "Type", "Père" = "Sire", "Mère" = "Dam", "Vendeur" = "Consignor", "Cour...Box" = "Stabling", "Acheteur" = "Purchaser", "Pleine.de" = "coveringSire", "Enchères" = "Price"
-        )
-      )
 
     # Create empty dataframe with correct column names. Not all XLS files initially contain all column names.
     allCols <-
       data.frame(
-        Lot = integer(), Name = character(), Foaled = character(), Sex = character(), Type = character(), Colour = character(), Sire = character(), Dam = character(), Consignor = character(), Stabling = character(), Purchaser = character(), coveringSire = character(), Catalogue = character(), Price = integer(), stringsAsFactors =
-          FALSE
+        Lot = integer(), Name = character(), Foaled = character(), Sex = character(),
+        Type = character(), Colour = character(), Sire = character(), Dam = character(),
+        Consignor = character(), Stabling = character(), Purchaser = character(),
+        coveringSire = character(), Catalogue = character(), Price = integer(),
+        stringsAsFactors = FALSE
       )
 
     # Bind empty dataframe with XLS data
