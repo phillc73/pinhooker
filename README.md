@@ -45,6 +45,8 @@ library("plyr")
 library("gdata")
 # Requires a minimum of version 0.3.1
 library("rvest")
+# Requires a minimum of version 0.1.2
+library("xml2")
 ```
 ### Optional Packages
 
@@ -132,8 +134,8 @@ There are some known data issues in the included [bloodstockSalesData.Rds](https
 
 ## Links
 
-* [Author's Website](http://www.starkingdom.co.uk)
-* [Author on Twitter](https://twitter.com/_starkingdom)
+* [Creators's Website](http://www.starkingdom.co.uk)
+* [Creator on Twitter](https://twitter.com/_starkingdom)
 * [FormBet](http://formbet.co.uk) - provider of daily race ratings and historic racing data.
 
 ## Disclaimer
