@@ -11,9 +11,10 @@ The package and included [demo](https://github.com/phillc73/pinhooker/tree/maste
 
 ## Latest Update
 
+* Arqana 2016 February Mixed Sale
 * Tattersalls 2016 February Sale
 * Tattersalls Ireland 2016 February National Hunt Sale
-* Goffs DBS January 2016 sale results
+* Goffs DBS January 2016 Sale
 
 ## Quick start
 

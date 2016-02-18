@@ -4,6 +4,10 @@
 
 library(pinhooker)
 
+# 2016
+
+getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=207", catalogue = "http://www.arqana.com/upload/pedigrees/vente207/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR", date = "2016-02-08", sale = "February Mixed Sale")
+
 # 2015
 
 getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=205", catalogue = "http://www.arqana.com/upload/pedigrees/vente205/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR", date = "2015-12-05", sale = "Breeding Stock Sale")
