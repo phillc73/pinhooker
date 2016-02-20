@@ -3,7 +3,7 @@ pinhooker
 
 `pinhooker` is an R package with two main aspects. The first is a pre-compiled Rds file comprising historic thoroughbred bloodstock sales data. The second aspect is a set of functions to compile bespoke thoroughbred sale results datasets and extend the included Rds file.
 
-The `bloodstockSalesData.rds` file is found in the [inst/extdata](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) directory, but will move up to the root directory when the package is installed. If only the data is required, and not the whole R package, simply download the Rds directly from this location. This data set exceeds 152,000 individual bloodstock sale records.
+The `bloodstockSalesData.rds` file is found in the [inst/extdata](https://github.com/phillc73/pinhooker/tree/master/inst/extdata) directory, but will move up to the root directory when the package is installed. If only the data is required, and not the whole R package, simply download the Rds directly from this location. This data set exceeds 154,000 individual bloodstock sale records.
 
 A collection of scripts located in the [demo](https://github.com/phillc73/pinhooker/tree/master/demo) folder support creating bespoke datasets from a wide range of sale auctioneers.
 
@@ -11,6 +11,7 @@ The package and included [demo](https://github.com/phillc73/pinhooker/tree/maste
 
 ## Latest Update
 
+* Goffs 2016 February Sale
 * Arqana 2016 February Mixed Sale
 * Tattersalls 2016 February Sale
 * Tattersalls Ireland 2016 February National Hunt Sale

@@ -4,6 +4,10 @@
 
 library(pinhooker)
 
+# 2016
+
+getGoffs(url = "http://goffs.com/sales-results/sales/february-sale-2016/excel/", catalogue = "http://goffs.com/files/8314/5268/6608/Full_catalogue.pdf", auctioneer = "Goffs", country = "IRE", currency = "EUR", date = "2016-02-10")
+
 # 2015
 
 getGoffs(url = "http://goffs.com/sales-results/sales/february-sale-2015/excel/", catalogue = "http://goffs.com/files/9014/2107/7132/Full_catalogue.pdf", auctioneer = "Goffs", country = "IRE", currency = "EUR", date = "2015-02-11")
