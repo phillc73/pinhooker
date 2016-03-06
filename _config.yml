@@ -10,7 +10,7 @@ title:            Pinhooker
 tagline:          'bloodstock sales analysis'
 description:      'using analytical data to make better bloodstock purchasing decisions'
 url:              http://phillc73.github.io/pinhooker/
-baseurl:          /
+baseurl:          http://phillc73.github.io/pinhooker/
 
 author:
   name:           'Phill Clarke'
