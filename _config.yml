@@ -6,7 +6,7 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            Pinhooker
+title:            pinhooker
 tagline:          'bloodstock sales analysis'
 description:      'analytical data for better bloodstock decisions'
 url:              http://phillc73.github.io/pinhooker/
