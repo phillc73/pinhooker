@@ -1,0 +1,27 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Pinhooker
+tagline:          'bloodstock sales analysis'
+description:      'using analytical data to make better bloodstock purchasing decisions'
+url:              http://phillc73.github.io/pinhooker/
+baseurl:          /
+
+author:
+  name:           'Phill Clarke'
+  url:            http://www.starkingdom.co.uk
+  email:          phill@starkingdom.co.uk
+
+paginate:         5
+
+# Custom vars
+version:          0.0.1
+
+github:
+  repo:           https://github.com/phillc73/pinhooker
