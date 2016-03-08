@@ -9,8 +9,8 @@ permalink:        pretty
 title:            pinhooker
 tagline:          'bloodstock sales analysis'
 description:      'improved bloodstock decisions through data analysis'
-url:              http://phillc73.github.io/pinhooker/
-baseurl:          http://phillc73.github.io/pinhooker/
+url:              http://pinhooker.online
+baseurl:          http://pinhooker.online
 
 author:
   name:           'Phill Clarke'
