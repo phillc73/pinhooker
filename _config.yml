@@ -10,14 +10,14 @@ title:            pinhooker
 tagline:          'bloodstock sales analysis'
 description:      'improved bloodstock decisions through data analysis'
 url:              http://pinhooker.online
-baseurl:          /
+baseurl:          ""
 
 author:
   name:           'Phill Clarke'
   url:            http://www.starkingdom.co.uk
   email:          phill@starkingdom.co.uk
 
-paginate:         5
+paginate:         1
 
 # Custom vars
 version:          0.0.1
