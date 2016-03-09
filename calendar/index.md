@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "2016 Bloodstock Sales Calendar"
+title: "2016 Sales Calendar"
 output: html_document
 ---
 
