@@ -1,5 +1,5 @@
 ---
-layout: calendar
+layout: page
 title: "2016 Sales Calendar"
 output: html_document
 ---
