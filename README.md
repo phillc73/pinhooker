@@ -11,6 +11,8 @@ The package and included [demo](https://github.com/phillc73/pinhooker/tree/maste
 
 ## Latest Update
 
+* Tattersalls Ireland Ascot 2016 February Sale
+* Tattersalls Ireland Cheltenham 2016 January Sale
 * Goffs 2016 February Sale
 * Arqana 2016 February Mixed Sale
 * Tattersalls 2016 February Sale
@@ -88,6 +90,7 @@ If used in conjunction with another database of historic racing data, such as [F
 ?getArqana
 ?getBBAG
 ?getTatts
+?getTattsAC
 ```
 Each function contains documented descriptions for their use and all supported arguments. Read them.
 
