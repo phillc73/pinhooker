@@ -16,14 +16,14 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="http://pinhooker.onlinepublic/css/poole.css">
-  <link rel="stylesheet" href="http://pinhooker.onlinepublic/css/syntax.css">
-  <link rel="stylesheet" href="http://pinhooker.onlinepublic/css/hyde.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|PT+Serif:400,400italic,700,700italic" type="text/css">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://pinhooker.onlinepublic/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="http://pinhooker.onlinepublic/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -33,10 +33,12 @@
   <body>
 
     <div class="sidebar">
+  <!--This is the div to append with random image-->
+ <div id="banner-load"></div>
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="http://pinhooker.online">
+        <a href="/">
           pinhooker
         </a>
       </h1>
@@ -44,17 +46,11 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="http://pinhooker.online">Home</a>
+      <a class="sidebar-nav-item" href="/">Home</a>
 
       
 
       
-      
-        
-          
-        
-      
-        
       
         
           
@@ -68,24 +64,72 @@
       
         
           
-            <a class="sidebar-nav-item" href="/calendar/">2016 Bloodstock Sales Calendar</a>
+            <a class="sidebar-nav-item" href="/archive/">Bulletin Archive</a>
           
         
       
-
-      <a class="sidebar-nav-item" href="https://github.com/phillc73/pinhooker">GitHub project</a>
-      <span class="sidebar-nav-item">Currently v0.0.1</span>
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/calendar/">2016 Sales Calendar</a>
+          
+        
+      
+        
+          
+        
+      
     </nav>
+      <div class="sidebar-social">
+        <a href="https://github.com/phillc73/pinhooker"><span class="icon-icon-github"></span></a>
+        <a href="https://twitter.com/pinhookdata"><span class="icon-icon-twitter"></span></a>
+      </div>
 
     <p>&copy; 2016. All rights reserved.</p>
   </div>
 </div>
 
+<!-- This loads the random image at the top of the side bar. We put it last for faster page loads -->
+<!-- Found at the following Gist: https://gist.github.com/stephenscaff/8266351 -->
+
+<!--Call in the Jquery-->
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
+
+<!--New images on load -->
+<script>
+//Add your images, we'll set the path in the next step
+    var images = ['coolcousin1.jpg', 'coolcousin2.jpg', 'coolcousin3.jpg', 'coolcousin4.jpg'];
+    
+//Build the img, then do a bit of maths to randomize load and append to a div. Add a touch off css to fade them badboys in all sexy like.
+    $('<img src="/public/img/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#banner-load');
+</script>
+<noscript><img src="/public/img/coolcousin1.jpg"></noscript>
+
 
     <div class="content container">
       <div class="page">
   <h1 class="page-title">About Pinhooker</h1>
-  <p>This page will have some information about <code class="highlighter-rouge">pinhooker</code>.</p>
+  <p><code class="highlighter-rouge">pinhooker</code> was born of a desire to provide improved data analysis for bloodstock investors. The heart of the service is a collected archive of bloodstock sales results from 2009 onwards. As the information was already in the public domain, albeit in disparate locations, this dataset is available as an <a href="https://github.com/phillc73/pinhooker">installable open source R package</a>.</p>
+
+<p>Currently six auctioneers are included in the dataset, which comprises in excess of 150,000 individual sale records. These are:</p>
+
+<ul>
+  <li><a href="http://www.goffs.com">Goffs</a></li>
+  <li><a href="http://www.goffsdbs.com">Goffs DBS</a></li>
+  <li><a href="http://www.arqana.com">Arqana</a> (France)</li>
+  <li><a href="http://www.bbag-sales.de/">Baden-Badener Auktionsgesellschaft e.V.</a> (Germany)</li>
+  <li><a href="http://www.tattersalls.com">Tattersalls</a></li>
+  <li><a href="http://www.tattersalls.ie">Tattersalls Ireland</a></li>
+</ul>
+
+<p>Future plans include the addition of more auctioneers from around the globe.</p>
+
+<p>The sale results data provided by these auction companies varies in quality and content. The <code class="highlighter-rouge">pinhooker</code> dataset is structured in such a way as to capture all data from all auctioneers, in some form. However, this also makes working with the raw data challenging as some rationalisation is required and in some cases addition of further valuable data.</p>
+
+<p>As well as data collection, the <code class="highlighter-rouge">pinhooker</code> service also provides sale and investigational reports on various aspects of the bloodstock industry. While many auctioneer companies publish basic sale data, including total volume by price, top priced lot and in many cases the mean of all prices, further analysis will add value. Charts and data visualisation play an important role in any analysis work and <code class="highlighter-rouge">pinhooker</code> specialises in this area. Using the data collected since 2009, it is also possible to analyse longer term market trends and compare results between auctioneers.</p>
+
+<p>If you have a interest in bespoke data reporting, please don’t hesitate to <a href="phill@starkingdom.co.uk">contact us</a> for a quote.</p>
 
 </div>
 
