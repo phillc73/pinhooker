@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: chart_page
 title: "About Pinhooker"
 output: html_document
 ---
@@ -23,4 +23,9 @@ The sale results data provided by these auction companies varies in quality and 
 
 As well as data collection, the `pinhooker` service also provides sale and investigational reports on various aspects of the bloodstock industry. While many auctioneer companies publish basic sale data, including total volume by price, top priced lot and in many cases the mean of all prices, further analysis will add value. Charts and data visualisation play an important role in any analysis work and `pinhooker` specialises in this area. Using the data collected since 2009, it is also possible to analyse longer term market trends and compare results between auctioneers.
 
-If you have a interest in bespoke data reporting, please don't hesitate to [contact us](phill@starkingdom.co.uk) for a quote.
+Figure 1, below, is a simple example chart displaying total catalogued progeny count, for the top ten sires by volume, in the `pinhooker` dataset. Numbers include withdrawn and un-sold lots.
+
+<!--html_preserve--><div id="htmlwidget-1219" style="width:612px;height:378px;" class="dimple html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1219">{"x":{"options":{"chart":[],"xAxis":{"type":"addCategoryAxis"},"yAxis":{"type":"addMeasureAxis"},"zAxis":[],"colorAxis":[],"defaultColors":[],"layers":[],"legend":[],"x":"Sire","y":"Progeny Count","type":"bar","bounds":{"x":"10%","y":"10%","width":"90%","height":"53%"},"title":{"text":null,"html":"<div style='text-align:center;width:100%'>\n      <b style = 'font-size:80%;'>Figure 1: Top 10 Sires by Catalogued Progeny Count\n      \u003c/b>\n    \u003c/div>"}},"data":{"Sire":["Invincible Spirit (IRE)","Acclamation (GB)","Exceed And Excel (AUS)","Cape Cross (IRE)","Royal Applause (GB)","Galileo (IRE)","Pivotal (GB)","Oasis Dream (GB)","Flemensfirth (USA)","Danehill Dancer (IRE)"],"Progeny Count":[1177,1154,1054,1038,1037,994,994,932,910,898]}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+
+If you have an interest in bespoke data reporting, please don't hesitate to [contact us](phill@starkingdom.co.uk) for a quote.
