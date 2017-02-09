@@ -7,6 +7,26 @@ library(pinhooker)
 # 2016
 
 getTattsAC(
+  url = "http://db.tattersalls.ie/4DCGI/Sale/ABU%2016",
+  catalogue = "http://tattersalls.ie/index.php/sales-results/2016-02-19-14-34-08/ascot-breeze-up-catalogue-pdf",
+  auctioneer = "Tattersalls Ireland Ascot",
+  country = "UK",
+  currency = "GBP",
+  date = "2016-04-06",
+  sale = "Ascot Breeze Up Sale"
+)
+
+getTattsAC(
+  url = "http://db.tattersalls.ie/4DCGI/Sale/CFS%2016",
+  catalogue = "http://tattersalls.ie/index.php/sales-results/cheltenham-festival-sale-staged-alongside-the-world-s-most-famous-national-hunt-festival-march-17-2016/cheltenham-festival-sale-catalogue-pdf",
+  auctioneer = "Tattersalls Ireland Cheltenham",
+  country = "UK",
+  currency = "GBP",
+  date = "2016-03-17",
+  sale = "Cheltenham Festival Sale"
+)
+
+getTattsAC(
   url = "http://db.tattersalls.ie/4DCGI/Sale/CJA%2016",
   catalogue = "http://www.tattersalls.ie/images/Cheltenham/January_2016/cheltenham%20janaury%20catalogue%202016.pdf",
   auctioneer = "Tattersalls Ireland Cheltenham",

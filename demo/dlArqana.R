@@ -1,12 +1,45 @@
 # Each recipe contains a complete set of function calls to generate bespoke data sets. For example, if you only want 2015 data, only execute the function calls from that year or just those for a specific sale across all years, etc.
-# Set function values if changes required from defaults, e.g. rds = TRUE (default generated file is csv)
+# Set function values if changes required from defaults, e.g. rds = TRUE (default generated file is Rds)
 # getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=205", catalogue = "http://www.arqana.com/upload/pedigrees/vente205/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR", date = "2015-12-05", sale = "Breeding Stock Sale", rds = TRUE, csv = FALSE, filename = "arqanaSaleData")
 
 library(pinhooker)
 
 # 2016
+getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=218",
+          catalogue = "http://www.arqana.com/upload/pedigrees/vente218/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR",
+          date = "2016-12-03", sale = "Breeding Stock Sale")
 
-getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=207", catalogue = "http://www.arqana.com/upload/pedigrees/vente207/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR", date = "2016-02-08", sale = "February Mixed Sale")
+getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=217",
+          catalogue = "http://www.arqana.com/upload/communiques/1complet_fra_.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR",
+          date = "2016-11-14", sale = "Autumn Sale")
+
+getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=215",
+          catalogue = "http://www.arqana.com/upload/pedigrees/vente215/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR",
+          date = "2016-10-18", sale = "October Yearling Sale")
+
+getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=216",
+          catalogue = "http://www.arqana.com/upload/pedigrees/vente216/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR",
+          date = "2016-10-01", sale = "Arc Sale")
+
+getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=212",
+          catalogue = "http://www.arqana.com/upload/pedigrees/vente212/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR",
+          date = "2016-08-17", sale = "v.2 Yearling Sale")
+
+getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=211",
+          catalogue = "http://www.arqana.com/upload/pedigrees/vente211/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR",
+          date = "2016-08-14", sale = "August Yearling Sale")
+
+getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=210",
+          catalogue = "http://www.arqana.com/upload/pedigrees/vente210/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR",
+          date = "2016-06-30", sale = "Summer Sale")
+
+getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=209",
+          catalogue = "http://www.arqana.com/upload/pedigrees/vente209/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR",
+          date = "2016-05-14", sale = "Breeze Up Sale Sale")
+
+getArqana(url = "http://www.arqana.com/web/vente/vente_actions.php?mode=get_csv&venid=207",
+          catalogue = "http://www.arqana.com/upload/pedigrees/vente207/complet_eng.pdf", auctioneer = "Arqana", country = "FR", currency = "EUR",
+          date = "2016-02-08", sale = "February Mixed Sale")
 
 # 2015
 

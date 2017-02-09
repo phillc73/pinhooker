@@ -66,8 +66,16 @@ getArqana <- function(url, catalogue = "", auctioneer, country, currency, date,
         url, sheet = 1, method = "csv", colClasses = "character", skip = 1, blank.lines.skip = TRUE, encoding = "latin1"
       )
 
-    # Rename columns to English
-    names(saleData) <- c("Lot", "Sex", "Foaled", "Type", "Name", "Sire", "Dam", "Consignor", "Stabling", "coveringSire", "Issue", "Purchaser", "Price")
+    # Rename columns to English, check if Pleine.de col exists because it doesn't always. If not, insert it in correct position
+    if("Pleine.de" %in% colnames(saleData))
+    {
+      names(saleData) <- c("Lot", "Sex", "Foaled", "Type", "Name", "Sire", "Dam", "Consignor", "Stabling", "coveringSire", "Issue", "Purchaser", "Price")
+    } else {
+      saleData$Pleine.de <- ""
+      saleData <- saleData[,c(1:9, 13, 10:12)]
+      names(saleData) <- c("Lot", "Sex", "Foaled", "Type", "Name", "Sire", "Dam", "Consignor", "Stabling", "coveringSire", "Issue", "Purchaser", "Price")
+
+    }
 
     # Translate French to English
     saleData$Sex[saleData$Sex == "F." &
@@ -88,6 +96,7 @@ getArqana <- function(url, catalogue = "", auctioneer, country, currency, date,
     saleData$Type[saleData$Type == "Jument"] <- "Mare"
     saleData$Type[saleData$Type == "Pouliche"] <- "Filly"
     saleData$Type[saleData$Type == "Etalon"] <- "Stallion"
+    saleData$Type[saleData$Type == "prospect étalon"] <- "Prospective Stallion"
     saleData$Type[saleData$Type == "Parts d'étalon"] <- "Stallion Shares"
     saleData$Type[saleData$Type == "Cheval à l'entrainement"] <-
       "Horse in Training"
