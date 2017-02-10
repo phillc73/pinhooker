@@ -4,6 +4,22 @@
 
 library(pinhooker)
 
+# 2016
+
+getBBAG(url = "http://www.bbag-sales.de/en/Catalogues-and-statistics.html?auctionType=Sales%20%26%20Racing%20Festival&auctionYear=2015&page=csvExport",
+        catalogue = "http://www.bbag-sales.de/download/public/share/public/BBAG/PDF-Dokumente/Kataloge/SuR_2016.pdf",
+        auctioneer = "BBAG", country = "DE", currency = "EUR", date = "2016-10-21", sale = "October Mixed Sale")
+
+
+getBBAG(url = "http://www.bbag-sales.de/en/Catalogues-and-statistics.html?auctionType=J%C3%A4hrlings-Auktion&auctionYear=2016&page=csvExport",
+        catalogue = "http://www.bbag-sales.de/download/public/share/public/BBAG/PDF-Dokumente/Kataloge/Jaehrling_Auktion_2016.pdf",
+        auctioneer = "BBAG", country = "DE", currency = "EUR", date = "2016-09-02", sale = "Premier Yearling Sales")
+
+
+getBBAG(url = "http://www.bbag-sales.de/en/Catalogues-and-statistics.html?auctionType=Fr%C3%BChjahrs-Auktion&auctionYear=2016&page=csvExport",
+        catalogue = "http://www.bbag-sales.de/download/public/share/public/BBAG/PDF-Dokumente/Kataloge/Fruehjahr_2016_LR.pdf",
+        auctioneer = "BBAG", country = "DE", currency = "EUR", date = "2016-06-26", sale = "Spring Breeze Up Sale")
+
 # 2015
 
 getBBAG(url = "http://www.bbag-sales.de/en/Catalogues-and-statistics.html?auctionType=Sales%20%26%20Racing%20Festival&auctionYear=2015&page=csvExport", catalogue = "http://www.bbag-sales.de/download/public/share/public/BBAG/PDF-Dokumente/Kataloge/SuR_Inhalt_2015_LR.pdf", auctioneer = "BBAG", country = "DE", currency = "EUR", date = "2015-10-16", sale = "October Mixed Sales")
