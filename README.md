@@ -138,12 +138,6 @@ There are some known data issues in the included [bloodstockSalesData.Rds](https
 * Add data from more bloodstock sale companies
 * Continually update default data set and [demo](https://github.com/phillc73/pinhooker/tree/master/demo) with new sale results from existing companies.
 
-## Links
-
-* [Creators's Website](http://www.starkingdom.co.uk)
-* [Creator on Twitter](https://twitter.com/_starkingdom)
-* [FormBet](http://formbet.co.uk) - provider of daily race ratings and historic racing data.
-
 ## Disclaimer
 
 The `pinhooker` package is provided with absolutely no warranty. All `pinhooker` functions have been tested and should work, but they may not work as you think they do. Data analysis for betting purposes can be fun and profitable, but also risky. Be sensible and read the documentation.
